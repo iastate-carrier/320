@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>
+Number Guessing Game
+		</title>
+	<script> 
+		alert ("Think of a number between 1 and 100!")
+			upper = 100
+			lower = 1
+			guess = Math.round((upper + lower) / 2);
+			var1 = prompt ("is the number " + guess + "?")
+			while (var1 !== "yes")
+			{
+				if (var1 == "<")
+				{
+					upper = (guess - 1)
+					guess = Math.round((upper + lower) / 2) ; 
+					var1 = prompt ("is the number " + guess + "?")
+				}
+				else if (var1 == ">")
+				{
+					lower = (guess + 1)
+					guess = Math.round((upper + lower) / 2) ; 
+					var1 = prompt ("is the number " + guess + "?") 
+				}
+			}
+			if (var1 == "yes")
+			{
+				alert ("I won!")
+			}
+	</script> 
+</html> 
