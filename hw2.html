@@ -1,0 +1,23 @@
+	<script>
+	shift = parseInt(prompt("Enter a positive or negative integer number that will represent a shift!"))
+	text = (prompt ("Enter some text, or a saying!"))
+	output = "" ; var re = /[a-z]/;
+	for (i=0; i<text.length; i++)
+	{ 
+	letters = text.substr(i,1)
+	code =  letters.charCodeAt ()
+	if ((code >= 65) && (code <= 90)) 
+	{
+	output += String.fromCharCode (((code - 65 + shift) % 26) + 65)
+	}
+	else if ((code >= 97) && (code <= 122)) 
+	{
+	output += String.fromCharCode (((code - 97 + shift + 26) % 26) + 97)
+	}
+	else
+	{
+	output += String.fromCharCode(code)
+	}
+	}
+	alert(output)
+	</script>
